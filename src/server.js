@@ -127,7 +127,7 @@ class Server {
       if (vposHelper.userCancelledInPass1(req.body) || vposHelper.isAuhtorizationResponseValid(req.body)) {
 
         if (req.body.authorizationResult == "00") {
-          //Comfirm charged amount is correct by checking req.body.chargeAmount
+          //Comfirm charged amount is correct by checking req.body.purchaseAmount
           //Update the status of the order to paid. 
           //Save authorization code and any other field from the authorization result. 
           //Send confirmation e-mail to the customer
