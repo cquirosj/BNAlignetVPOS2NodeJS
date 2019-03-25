@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>vpos2return</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container"> 
+        <p>
+                <a class="btn btn-primary" href="/" role="button">Start over</a>
+        </p>
+        <form>
+            <fieldset>
+                <legend>For end user</legend>
+                <div class="form-group" >
+                    <label class="col-sm-3 control-label">Result</label>
+                    <div class="col-sm-9">
+                        <input readonly type="text" class="form-control" value="#ResultForUser#">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>General result (dot not show this to your end user)</legend>
+                <div class="form-group" >
+                    <label class="col-sm-3 control-label">authorizationResult</label>
+                    <div class="col-sm-9">
+                        <input readonly type="text" class="form-control" value="#authorizationResult#">
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="col-sm-3 control-label">errorCode</label>
+                    <div class="col-sm-9">
+                        <input readonly type="text" class="form-control" value="#errorCode#">
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="col-sm-3 control-label">errorMessage</label>
+                    <div class="col-sm-9">
+                        <input readonly type="text" class="form-control" value="#errorMessage#">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>All result values (dot not show this to your end user)</legend>
+                #all-values#
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

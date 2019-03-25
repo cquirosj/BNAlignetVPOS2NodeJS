@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="ctrlv" class="gr__ctrlv_ca" style="overflow-y: hidden;">
+<head>
+    <title>CtrlV POC1</title>
+</head>
+<body>
+   <layout>
+       <checkout></checkout>
+   </layout>
+
+    <form class="alignet-form-vpos2"method="post" action="#" id="paymentConfirmation" name="paymentConfirmation">
+        <input type="hidden" id="acquirerId" name="acquirerId" value="#AcquirerId#"/>
+        <input type="hidden" id="idCommerce" name="idCommerce" value="#IdCommerce#"/>
+        <input type="hidden" id="descriptionProducts" name="descriptionProducts" value="Play ticket"/>
+        <!--<input type="hidden" id="language" name="language" value="SP"/>-->
+        <input type="hidden" id="language" name="language" value="EN"/>
+        <input type="hidden" id="programmingLanguage" name="programmingLanguage" value="NodeJS"/>
+        <input type="hidden" id="purchaseAmount" name="purchaseAmount" value=""/>
+        <input type="hidden" id="purchaseCurrencyCode" name="purchaseCurrencyCode" value=""/>
+        <input type="hidden" id="purchaseOperationNumber" name="purchaseOperationNumber" value=""/>
+        <input type="hidden" id="purchaseVerification" name="purchaseVerification" value=""/>
+        <input type="hidden" id="reserved1" name="reserved1" value=""/>
+        <input type="hidden" id="shippingAddress" name="shippingAddress" value=""/>
+        <input type="hidden" id="shippingCity" name="shippingCity" value=""/>
+        <input type="hidden" id="shippingCountry" name="shippingCountry" value="CR"/>
+        <input type="hidden" id="shippingEmail" name="shippingEmail" value=""/>
+        <input type="hidden" id="shippingFirstName" name="shippingFirstName" value=""/>
+        <input type="hidden" id="shippingLastName" name="shippingLastName" value=""/>
+        <input type="hidden" id="shippingState" name="shippingState" value=""/>
+        <input type="hidden" id="shippingZIP" name="shippingZIP" value=""/>
+        <input type="hidden" id="userCodePayme" name="userCodePayme" value=""/>
+        <input type="hidden" id="userCommerce" name="userCommerce" value=""/>
+    </form>
+   <script>
+       window._CntrlVAlignetIntegration= {
+            IsProduction:#IsProduction#
+       };
+   </script>
+   <script type="text/javascript" src="#AlignetModalJavascript#"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.min.js"></script>
+   <script type="text/javascript" src="/static/js/app.js"></script>
+</body>
+</html>

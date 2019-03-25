@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Days One', serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#root {
+  height: 100%;
+}
+.AppContainer {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(white), color-stop(lightgray), to(gray));
+  background: -webkit-linear-gradient(top, white, white, lightgray, gray);
+  background: -o-linear-gradient(top, white, white, lightgray, gray);
+  background: linear-gradient(to bottom, white, white, lightgray, gray);
+}
+.SizeDetector {
+  height: 100%;
+  position: relative;
+}
+.Toast {
+  background: #0098DA;
+  color: white;
+  font-family: 'Days One', serif;
+  font-size: 16px;
+}
+.ToastContainer {
+  z-index: 50;
+}
+.ToastProgress {
+  background: rgba(255, 255, 255, 0.4);
+}
+.Toastify__toast-body {
+  padding-right: 10px;
+}
+
+
+
+// WEBPACK FOOTER //
+// ./src/index.css

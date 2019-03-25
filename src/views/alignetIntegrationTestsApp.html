@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html ng-app="ctrlv">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>vpos2return</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="container" ng-controller="checkout">
+
+        <form class="alignet-form-vpos2 " method="post" action="#" id="paymentConfirmation" name="paymentConfirmation">
+            <fieldset>
+                <legend>Type an amount</legend>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Amount</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" ng-model="Amount">
+                    </div>
+                </div>
+                <div class="navbar-form pull-right">
+                        <button type="button" class="btn btn-primary " ng-click="pay()">Pay</button>
+                </div>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Alignet "hidden" form</legend>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">acquirerId</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="acquirerId" name="acquirerId"
+                            value="#AcquirerId#">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">idCommerce</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="idCommerce" name="idCommerce"
+                            value="#IdCommerce#">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">descriptionProducts</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="descriptionProducts"
+                            name="descriptionProducts" value="Play ticket">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">language</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="language" name="language" value="EN">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">programmingLanguage</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="programmingLanguage"
+                            name="programmingLanguage" value="NodeJS">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">purchaseAmount</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="purchaseAmount" name="purchaseAmount"
+                            value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">purchaseCurrencyCode</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="purchaseCurrencyCode"
+                            name="purchaseCurrencyCode" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">purchaseOperationNumber</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="purchaseOperationNumber"
+                            name="purchaseOperationNumber" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">purchaseVerification</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="purchaseVerification"
+                            name="purchaseVerification" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">reserved1</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="reserved1" name="reserved1" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">shippingAddress</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="shippingAddress" name="shippingAddress"
+                            value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">shippingCity</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="shippingCity" name="shippingCity" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">shippingCountry</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="shippingCountry" name="shippingCountry"
+                            value="CR">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">shippingEmail</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="shippingEmail" name="shippingEmail"
+                            value="aobando@gmail.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">shippingFirstName</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="shippingFirstName" name="shippingFirstName"
+                            value="Andrea">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">shippingLastName</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="shippingLastName" name="shippingLastName"
+                            value="Obando">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">shippingState</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="shippingState" name="shippingState"
+                            value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">shippingZIP</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="shippingZIP" name="shippingZIP" value="0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">userCodePayme</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="userCodePayme" name="userCodePayme"
+                            value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">userCommerce</label>
+                    <div class="col-sm-9">
+                        <input type="text" readonly class="form-control" id="userCommerce" name="userCommerce" value="">
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://integracion.alignetsac.com/VPOS2/js/modalcomercio.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.min.js"></script>
+    <script>
+        var App = angular.module('ctrlv', ['ngRoute']).run(['$rootScope', function ($rootScope) {
+
+        }]);
+
+        App.controller('checkout', ['$scope','$http', function ($scope,$http) {
+
+            $scope.Amount="0.75";
+
+            $scope.pay = function () {
+
+                $http.post('/api/integrationTests/signAmount', { Amount: $scope.Amount }).then(function (response) {
+                    updateAlignetHiddenForm(response.data);
+                    AlignetVPOS2.openModal('https://integracion.alignetsac.com/');
+                });
+            }
+
+            function updateAlignetHiddenForm(signatureData) {
+
+                document.getElementById('purchaseAmount').value = signatureData.Amount;
+                document.getElementById('purchaseCurrencyCode').value = signatureData.CurrencyCode;
+                document.getElementById('purchaseOperationNumber').value = signatureData.OrderId;
+                document.getElementById('purchaseVerification').value = signatureData.Signature;
+            }
+        }]);
+    </script>
+</body>
+
+</html>

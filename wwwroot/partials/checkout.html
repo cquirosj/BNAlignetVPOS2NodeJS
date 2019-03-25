@@ -1,0 +1,483 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Days+One">
+<link href="/static/css/index.css" rel="stylesheet">
+<link href="/static/css/main.d9618130.css" rel="stylesheet">
+<style data-jss="" data-meta="MuiTouchRipple">
+    .jss68 {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 0;
+        position: absolute;
+        overflow: hidden;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+
+    .jss69 {
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        position: absolute;
+    }
+
+    .jss70 {
+        opacity: 0.3;
+        transform: scale(1);
+        animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .jss71 {
+        animation-duration: 200ms;
+    }
+
+    .jss72 {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        display: block;
+        border-radius: 50%;
+        background-color: currentColor;
+    }
+
+    .jss73 {
+        opacity: 0;
+        animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .jss74 {
+        top: 0;
+        left: 0;
+        position: absolute;
+        animation: mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+    }
+
+    @-webkit-keyframes mui-ripple-enter {
+        0% {
+            opacity: 0.1;
+            transform: scale(0);
+        }
+
+        100% {
+            opacity: 0.3;
+            transform: scale(1);
+        }
+    }
+
+    @-webkit-keyframes mui-ripple-exit {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes mui-ripple-pulsate {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(0.92);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+<style data-jss="" data-meta="MuiButtonBase">
+    .jss65 {
+        color: inherit;
+        border: 0;
+        margin: 0;
+        cursor: pointer;
+        display: inline-flex;
+        outline: none;
+        padding: 0;
+        position: relative;
+        align-items: center;
+        user-select: none;
+        border-radius: 0;
+        vertical-align: middle;
+        justify-content: center;
+        -moz-appearance: none;
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .jss65::-moz-focus-inner {
+        border-style: none;
+    }
+
+    .jss65.jss66 {
+        cursor: default;
+        pointer-events: none;
+    }
+</style>
+<style data-jss="" data-meta="MuiButton">
+    .jss39 {
+        color: rgba(0, 0, 0, 0.87);
+        padding: 8px 16px;
+        font-size: 0.875rem;
+        min-width: 64px;
+        box-sizing: border-box;
+        min-height: 36px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        font-weight: 500;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+
+    .jss39:hover {
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .jss39.jss59 {
+        color: rgba(0, 0, 0, 0.26);
+    }
+
+    @media (hover: none) {
+        .jss39:hover {
+            background-color: transparent;
+        }
+    }
+
+    .jss39:hover.jss59 {
+        background-color: transparent;
+    }
+
+    .jss40 {
+        width: 100%;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+    }
+
+    .jss42 {
+        color: #3f51b5;
+    }
+
+    .jss42:hover {
+        background-color: rgba(63, 81, 181, 0.08);
+    }
+
+    @media (hover: none) {
+        .jss42:hover {
+            background-color: transparent;
+        }
+    }
+
+    .jss43 {
+        color: #f50057;
+    }
+
+    .jss43:hover {
+        background-color: rgba(245, 0, 87, 0.08);
+    }
+
+    @media (hover: none) {
+        .jss43:hover {
+            background-color: transparent;
+        }
+    }
+
+    .jss47 {
+        border: 1px solid rgba(0, 0, 0, 0.23);
+    }
+
+    .jss48 {
+        border: 1px solid rgba(63, 81, 181, 0.5);
+    }
+
+    .jss48:hover {
+        border: 1px solid #3f51b5;
+    }
+
+    .jss48.jss59 {
+        border: 1px solid rgba(0, 0, 0, 0.26);
+    }
+
+    .jss49 {
+        border: 1px solid rgba(245, 0, 87, 0.5);
+    }
+
+    .jss49:hover {
+        border: 1px solid #f50057;
+    }
+
+    .jss49.jss59 {
+        border: 1px solid rgba(0, 0, 0, 0.26);
+    }
+
+    .jss50 {
+        color: rgba(0, 0, 0, 0.87);
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+        background-color: #e0e0e0;
+    }
+
+    .jss50.jss58 {
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .jss50:active {
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    .jss50.jss59 {
+        color: rgba(0, 0, 0, 0.26);
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .jss50:hover {
+        background-color: #d5d5d5;
+    }
+
+    @media (hover: none) {
+        .jss50:hover {
+            background-color: #e0e0e0;
+        }
+    }
+
+    .jss50:hover.jss59 {
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .jss51 {
+        color: #fff;
+        background-color: #3f51b5;
+    }
+
+    .jss51:hover {
+        background-color: #303f9f;
+    }
+
+    @media (hover: none) {
+        .jss51:hover {
+            background-color: #3f51b5;
+        }
+    }
+
+    .jss52 {
+        color: #fff;
+        background-color: #f50057;
+    }
+
+    .jss52:hover {
+        background-color: #c51162;
+    }
+
+    @media (hover: none) {
+        .jss52:hover {
+            background-color: #f50057;
+        }
+    }
+
+    .jss56 {
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        min-width: 0;
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 50%;
+    }
+
+    .jss56:active {
+        box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .jss57 {
+        width: auto;
+        height: 48px;
+        padding: 0 16px;
+        min-width: 48px;
+        border-radius: 24px;
+    }
+
+    .jss60 {
+        color: inherit;
+    }
+
+    .jss61 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .jss62 {
+        padding: 7px 8px;
+        min-width: 64px;
+        font-size: 0.8125rem;
+        min-height: 32px;
+    }
+
+    .jss63 {
+        padding: 8px 24px;
+        min-width: 112px;
+        font-size: 0.9375rem;
+        min-height: 40px;
+    }
+
+    .jss64 {
+        width: 100%;
+    }
+</style>
+<style data-jss="">
+    .jss38 {
+        color: #fff;
+        margin: 8px;
+        margin-top: 16px;
+        background-color: #0098DA;
+    }
+
+    .jss38:hover {
+        background-color: #007db3;
+    }
+</style>
+<div id="root">
+    <div class="SizeDetector">
+        <div class="AppContainer">
+            <div class="Header">
+                <div class="Header-topBar Header-topBar--hide"><a href="/"><img alt="Logo" class="Header-logo"
+                            src="https://storage.googleapis.com/ctrlv-www/wp-uploads/2016/11/PNG-Ctrl-V.png"></a>
+                    <div class="Header-timer"></div>
+                </div>
+                <div class="Header-message">
+                    <div class="Header-flash"></div>
+                    <div class="Header-header">CALGARY (GLENMORE)</div>
+                    <div class="Header-subHeader">FRIDAY, MARCH 22ND</div>
+                </div>
+            </div>
+           
+            <div class="Checkout" ng-form="checkoutform">
+                    <div class="Checkout-boxes">
+                        <div class="Checkout-form">
+                            <div class="TextField TextField--error TextField--45">
+                                <div class="TextField-label">FIRST NAME<span class="TextField-required"> *</span></div>
+                                <input class="TextField-input" type="text" id="firstName" value=""  ng-model="$ctrl.reservation.first_name" autofocus required>
+                                <div class="TextField-errorMessage" style="height: 20px;">Required field</div>
+                            </div>
+                            <div class="TextField TextField--45">
+                                <div class="TextField-label">LAST NAME<span class="TextField-required"> *</span></div>
+                                <input class="TextField-input" type="text" id="lastName" value="" ng-model="$ctrl.reservation.last_name" required>
+                                <div class="TextField-errorMessage" style="height: 20px;"></div>
+                            </div>
+                            <div class="TextField TextField--30">
+                                <div class="TextField-label">EMAIL<span class="TextField-required"> *</span></div>
+                                <input
+                                    class="TextField-input" type="text" id="email" placeholder="example@email.com"
+                                    value="" ng-model="$ctrl.reservation.email_address" required>
+                                <div class="TextField-errorMessage" style="height: 20px;"></div>
+                            </div>
+                            <div class="TextField TextField--30">
+                                <div class="TextField-label">CONFIRM YOUR EMAIL<span class="TextField-required">
+                                        *</span></div><input class="TextField-input" type="text" id="email2"
+                                    placeholder="example@email.com" value="">
+                                <div class="TextField-errorMessage" style="height: 20px;"></div>
+                            </div>
+                            <div class="TextField TextField--30">
+                                <div class="TextField-label">PHONE NUMBER<span class="TextField-required"> *</span>
+                                </div>
+                                <input class="TextField-input" type="tel" id="phone" placeholder="(555) 555-5555"
+                                    value="" ng-model="$ctrl.reservation.phone_number">
+                                <div class="TextField-errorMessage" style="height: 20px;"></div>
+                            </div>
+                            <div style="width: 100%;">
+                                <div class="TextField TextField--45 TextField--promo">
+                                    <div class="TextField-label">PROMO CODE</div><input class="TextField-input"
+                                        type="text" id="promo" autocomplete="off" value=""
+                                        style="text-transform: uppercase;">
+                                    <div class="TextField-errorMessage" style="height: 20px;"></div>
+                                </div>
+                            </div><span class="Checkout-GiftCardButton"><button tabindex="0"
+                                    class="jss65 jss39 jss50 jss51 jss53 jss54 jss63 jss38" type="button"><span
+                                        class="jss40">APPLY GIFT CARDS</span><span class="jss68"></span></button></span>
+                        </div>
+                    </div>
+                </div>
+                
+
+            <div class="PriceBar PriceBar--total">
+                    <div class="Accordion">
+                        <div class="Accordion-contentContainer" ng-style="{'height':$ctrl.isTotalOpen && '130px' || '0px'}"
+                            style="position: relative; overflow: hidden; width: 100%; height: 0px; transition: height 0.5s ease 0s;">
+                            <div
+                                style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;">
+                                <div class="Accordion-content">
+                                    <div class="PriceBar-lineItemList">
+                                        <div class="PriceBar-lineItems">
+                                            <div class="PriceBar-lineItems-time">9:30 PM</div>
+                                            <div class="PriceBar-lineItem">
+                                                <div class="PriceBar-lineItem-quantity-and-name">1 x VR Station</div>
+                                                <div class="PriceBar-lineItem-price">$24.99 EACH</div>
+                                                <div class="PriceBar-lineItem-spacer"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="PriceBar-priceRows">
+                                        <div class="PriceBar-row">
+                                            <div class="PriceBar-label">SUBTOTAL:</div>
+                                            <div class="PriceBar-valueContainer">
+                                                <div class="PriceBar-value">$24.99</div>
+                                            </div>
+                                        </div>
+                                        <div class="PriceBar-row PriceBar-tax">
+                                            <div class="PriceBar-label" style="font-size: 14px;">Alberta GST 5%:</div>
+                                            <div class="PriceBar-valueContainer">
+                                                <div class="PriceBar-value">$1.25</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                style="position: absolute; height: 6px; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;">
+                                <div
+                                    style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 0px;">
+                                </div>
+                            </div>
+                            <div
+                                style="position: absolute; width: 6px; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;">
+                                <div
+                                    style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 0px; transform: translateY(0px);">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Accordion-header">
+                            <div class="Accordion-headerContent">
+                                <div>
+                                    <div class="PriceBar-row PriceBar-headerRow">
+                                        <div class="PriceBar-label">TOTAL:</div>
+                                        <div class="PriceBar-valueContainer">
+                                            <div class="PriceBar-value">$26.24</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Accordion-headerIcon">
+                                <img alt="ArrowUp" ng-src="{{$ctrl.isTotalOpen && '/static/images/ArrowUp.png' || '/static/images/ArrowDown.png'}}"
+                                    src="/static/images/ArrowUp.png" ng-click="$ctrl.isTotalOpen=!$ctrl.isTotalOpen"></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="Footer">
+                <div class="FooterSpacer"></div>
+                <div class="FooterNext" ng-class="{'FooterNext--disabled':!checkoutform.$valid}">
+                    <div class="FooterPulse" ng-class="{'FooterPulse--disabled':!checkoutform.$valid}" ng-click=$ctrl.pay()>PAY<img alt="Arrow Right"
+                            src="/static/images/ArrowRight.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
