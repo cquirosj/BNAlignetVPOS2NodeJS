@@ -8,7 +8,7 @@
        <checkout></checkout>
    </layout>
 
-    <form class="alignet-form-vpos2"method="post" action="#" id="paymentConfirmation" name="paymentConfirmation">
+    <form class="alignet-form-vpos2"method="post" action="#AlignetUrl#" id="paymentConfirmation" name="paymentConfirmation">
         <input type="hidden" id="acquirerId" name="acquirerId" value="#AcquirerId#"/>
         <input type="hidden" id="idCommerce" name="idCommerce" value="#IdCommerce#"/>
         <input type="hidden" id="descriptionProducts" name="descriptionProducts" value="Play ticket"/>
@@ -31,12 +31,6 @@
         <input type="hidden" id="userCodePayme" name="userCodePayme" value=""/>
         <input type="hidden" id="userCommerce" name="userCommerce" value=""/>
     </form>
-   <script>
-       window._CntrlVAlignetIntegration= {
-            IsProduction:#IsProduction#
-       };
-   </script>
-   <script type="text/javascript" src="#AlignetModalJavascript#"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.min.js"></script>
    <script type="text/javascript" src="/static/js/app.js"></script>

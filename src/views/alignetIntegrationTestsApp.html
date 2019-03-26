@@ -12,7 +12,7 @@
 <body>
     <div class="container" ng-controller="checkout">
 
-        <form class="alignet-form-vpos2 " method="post" action="#" id="paymentConfirmation" name="paymentConfirmation">
+        <form class="alignet-form-vpos2 " method="post" action="#AlignetUrl#" id="paymentConfirmation" name="paymentConfirmation">
             <fieldset>
                 <legend>Type an amount</legend>
                 <div class="form-group">
@@ -170,7 +170,6 @@
         </form>
     </div>
 
-    <script type="text/javascript" src="https://integracion.alignetsac.com/VPOS2/js/modalcomercio.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.min.js"></script>
     <script>
@@ -186,7 +185,7 @@
 
                 $http.post('/api/integrationTests/signAmount', { Amount: $scope.Amount }).then(function (response) {
                     updateAlignetHiddenForm(response.data);
-                    AlignetVPOS2.openModal('https://integracion.alignetsac.com/');
+                    document.paymentConfirmation.submit();
                 });
             }
 

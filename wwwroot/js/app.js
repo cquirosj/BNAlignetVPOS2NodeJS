@@ -44,13 +44,7 @@ App.component('checkout', {
 
                 updateAlignetHiddenForm(response.data, $ctrl.reservation);
 
-                //For a strange reason they require you to send a different value when calling the openModal() function
-                //even though a different javascript is referenced for production and sandbox.
-                if(_CntrlVAlignetIntegration.IsProduction){
-                    AlignetVPOS2.openModal('');
-                } else {
-                    AlignetVPOS2.openModal('https://integracion.alignetsac.com/');
-                }
+                document.paymentConfirmation.submit();
             });
         }
 
