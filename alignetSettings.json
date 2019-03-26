@@ -3,6 +3,7 @@
     "AcquirerId":"update me",
     "IdCommerce":"update me",
     "IsProduction":false,
-    "ProductionJavascriptURL":"https://vpayment.verifika.com/VPOS2/js/modalcomercio.js",
-    "SandboxJavascriptURl":"https://integracion.alignetsac.com/VPOS2/js/modalcomercio.js"
+    "ProductionPostURL":"https://vpayment.verifika.com/VPOS2/faces/pages/startPayme.xhtml",
+    "SandboxPostURl":"https://integracion.alignetsac.com/VPOS2/faces/pages/startPayme.xhtml",
+    "AuthorizationResultReturnRoute":"update me"
 }

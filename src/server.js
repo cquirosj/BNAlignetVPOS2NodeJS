@@ -48,20 +48,17 @@ class Server {
   }
 
   initRoutes() {
+    var alignetSettings = JSON.parse(fs.readFileSync("alignetSettings.json"));
+
     app.get('/', (req, res) => res.sendFile(path.resolve('src/views/index.html')));
 
     app.get('/ctrlv.html', function (req, res) {
-      var alignetSettings = JSON.parse(fs.readFileSync("alignetSettings.json"));
 
       res.render('ctrlvPOC1', {
         bindings: [
           {
-            key: "#AlignetModalJavascript#",
-            value: alignetSettings.IsProduction && alignetSettings.ProductionJavascriptURL || alignetSettings.SandboxJavascriptURl
-          },
-          {
-            key: "#IsProduction#",
-            value: alignetSettings.IsProduction
+            key: "#AlignetUrl#",
+            value: alignetSettings.IsProduction && alignetSettings.ProductionPostURL || alignetSettings.SandboxPostURl
           },
           {
             key: "#AcquirerId#",
@@ -79,8 +76,6 @@ class Server {
 
       var orderTotal = calculateOrderTotal(req.body);
       var orderNumber = saveOrderDetails(req.body).OrderId;
-
-      var alignetSettings = JSON.parse(fs.readFileSync("alignetSettings.json"));
 
       var vposHelper =
         new AlignetVPOS2Util.AlignetVPOS2Helper(
@@ -113,11 +108,9 @@ class Server {
         return newOrder;
       }
 
-       
     });
 
-    app.post('/boleteria/vpos2return', function (req, res) {
-      var alignetSettings = JSON.parse(fs.readFileSync("alignetSettings.json"));
+    app.post(alignetSettings.AuthorizationResultReturnRoute, function (req, res) {
 
       var vposHelper = new AlignetVPOS2Util.AlignetVPOS2Helper(
         alignetSettings.SecretKey,
@@ -165,7 +158,6 @@ class Server {
 
     //WARNING: For manual integration tests only. Amounts should never be accepted from the client.
     app.post('/api/integrationTests/signAmount', function (req, res) {
-      var alignetSettings = JSON.parse(fs.readFileSync("alignetSettings.json"));
 
       var vposHelper =
         new AlignetVPOS2Util.AlignetVPOS2Helper(
@@ -192,10 +184,13 @@ class Server {
     });
 
     app.get('/alignetIntegrationTestsApp.html', function (req, res) {
-      var alignetSettings = JSON.parse(fs.readFileSync("alignetSettings.json"));
 
       res.render('alignetIntegrationTestsApp', {
         bindings: [
+          {
+            key: "#AlignetUrl#",
+            value: alignetSettings.IsProduction && alignetSettings.ProductionPostURL || alignetSettings.SandboxPostURl
+          },
           {
             key: "#AcquirerId#",
             value: alignetSettings.AcquirerId
